@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawwwnnn</title>
+    <style>
+        body {
+            background: url(https://clan.fastly.steamstatic.com/images/3703047/c0bf0ec8450254a0a3f5ec602e0f92c6a8f3efb9.png) center/cover no-repeat;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #links {
+            background: rgba(94, 94, 94, 0.725);
+            width: 50%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            border: 5px;
+            border-color: black;
+            border-style: solid;
+        }
+
+        a {
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+
+        .dropdown {
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0 15px;
+            border-radius: 10px;
+            transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+        }
+
+
+        .show {
+            max-height: 1000px; 
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+
+        .hero-name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="links">
+
+        <a id="aboutBtn">About Me</a>
+        <div id="aboutDropdown" class="dropdown">
+            Hi, I'm Shawn—a first-year college student currently enrolled in the Department of Criminology. 
+            I'm someone who loves learning new things, even if they don’t always serve a practical purpose—
+            because for me, curiosity is its own reward. I have a wide range of hobbies, but one that stands 
+            out the most is playing video games. Out of all the games I've played, Dota holds a special place 
+            in my heart. That’s why I’ve decided to dedicate this webpage to celebrating everything I love 
+            about the game (well, not everything but a glimpse)—from epic plays and favorite heroes to unforgettable 
+            matches. Whether you're a fellow gamer or just curious, I hope you enjoy exploring this digital tribute 
+            to a game that’s more than just a pastime—it's a passion.
+        </div>
+
+
+        <a id="dotaBtn">Dota 2</a>
+        <div id="dotaDropdown" class="dropdown">
+            Dota 2 is one of those games that’s easy to get into but really hard to master—and that’s what makes it so addicting. 
+            It’s a 5v5 online battle game where each player picks a unique hero, and the goal is to take down the enemy team’s Ancient 
+            (basically their base) while protecting your own. What makes Dota 2 stand out is the huge variety of heroes, endless 
+            strategies, and how no two matches ever feel the same. Whether you’re into making big plays, supporting your team, or 
+            just trying out different builds, there’s always something new to learn. Plus, with things like cool cosmetic items, 
+            regular updates, and massive tournaments like The International, the game stays fresh and exciting. It’s more than 
+            just a game—it’s a whole experience.
+        </div>
+
+ 
+        <a id="heroesBtn">Heros</a>
+        <div id="heroesDropdown" class="dropdown">
+            <div class="hero-name">Morphling</div>
+            Morphling is a slippery and highly versatile hero who can shift his strength and agility on the fly, making him hard to kill and dangerous in fights. 
+            He can morph into enemy heroes, steal their abilities, and turn the tide of battle with insane burst damage or survivability. 
+            Whether you build him as a glass cannon or a tanky frontliner, Morphling is all about skill, timing, and flexibility.
+
+            <div class="hero-name">Troll Warlord</div>
+            Troll Warlord is a high-tempo carry who shines in extended fights. 
+            He can switch between ranged and melee attacks, letting him chase down enemies or kite them from a distance. 
+            His ultimate, Battle Trance, keeps him alive even when he’s on the brink of death, making him a terrifying force 
+            in 1v1 duels or chaotic team fights. Once Troll gets his items, he becomes a machine that’s hard to stop.
+
+            <div class="hero-name">Juggernaut</div>
+            Juggernaut is a classic and reliable carry that’s great for both beginners and veterans. 
+            With his iconic Blade Fury and game-changing ultimate, Omnislash, he can deal serious damage while staying safe. 
+            His healing ward also gives great sustain for his team during pushes and fights. Juggernaut’s mix of mobility, 
+            healing, and damage makes him a solid pick in almost any situation.
+        </div>
+    </div>
+
+    <script>
+
+        function setupDropdown(buttonId, dropdownId) {
+            const btn = document.getElementById(buttonId);
+            const dropdown = document.getElementById(dropdownId);
+
+            btn.addEventListener('click', function () {
+                dropdown.classList.toggle('show');
+            });
+        }
+
+
+        setupDropdown('aboutBtn', 'aboutDropdown');
+        setupDropdown('dotaBtn', 'dotaDropdown');
+        setupDropdown('heroesBtn', 'heroesDropdown');
+    </script>
+</body>
+</html>
